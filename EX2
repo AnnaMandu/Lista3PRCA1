@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lista3Ex2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            double valor1 = 0;
+            double valor2 = 0;
+
+            Console.WriteLine("\n---------Exercício 2 da Lista 3---------\n");
+            
+            Console.Write("Digite o Primeiro Valor: ");
+            valor1 = double.Parse(Console.ReadLine());
+
+            Console.Write("Digite o Segundo Valor: ");
+            valor2 = double.Parse(Console.ReadLine());
+
+            while (valor2 <= valor1)
+            {
+                Console.Write("Digite o Segundo Valor Novamente (Esse Valor Deverá Ser Maior que o Primeiro): ");
+                valor2 = double.Parse(Console.ReadLine());
+            }
+        }
+    }
+}

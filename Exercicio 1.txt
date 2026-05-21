@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lista1Ex1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            double nbase;
+            double altura;
+            double area;
+
+            Console.WriteLine("\n---------Exercício 1 da Lista 1---------\n");
+            
+            Console.Write("Digite o Valor da Base do Retângulo: ");
+            nbase = double.Parse(Console.ReadLine());
+
+            Console.Write("Digite o Valor da Altura do Retângulo: ");
+            altura = double.Parse(Console.ReadLine());
+
+            area = nbase * altura;
+
+            Console.WriteLine("");
+            Console.WriteLine("A Área do Retângulo Vale: {0}", area);
+        }
+    }
+}

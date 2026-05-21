@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lista3Ex7
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            double x = 1;
+            double y = 0;
+            double z = 1;
+
+            Console.WriteLine("\n---------Exercício 7 da Lista 3---------\n");
+
+            while(z <= 20)
+            {
+                while((x >= 1) && (x <= 10))
+                {
+                    y = z * x;
+                    Console.WriteLine("\n{0} x {1} = {2}", z, x, y);
+                    Console.WriteLine("Pressione Uma Telca para Continuar");
+                    Console.ReadKey();
+
+                    x++;
+                }
+                x = 1;
+                y = 0;
+
+                z++;
+            }
+        }
+    }
+}
+

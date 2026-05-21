@@ -1,0 +1,106 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lista3Ex12
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            char resp;
+
+            Console.WriteLine("\n---------Exercício 12 da Lista 3---------");
+
+            do
+            {
+                double qtd = 0;
+                double i = 0;
+                double pos = 0;
+                double neg = 0;
+                double valor = 0;
+                double maior = 0;
+                double menor = 0;
+                double soma = 0;
+                double media = 0;
+                double porcPos = 0;
+                double porcNeg = 0;
+
+                Console.WriteLine("\nDigite a Quantidade de Valores:");
+                qtd = double.Parse(Console.ReadLine());
+
+                while (qtd <= 0 || qtd >= 20)
+                {
+                    Console.WriteLine("Erro!");
+                    Console.WriteLine("Informe a Quantidade de Valores Novamente (0 < Valor < 20): ");
+                    qtd = double.Parse(Console.ReadLine());
+                }
+
+                Console.WriteLine("");
+
+                while (i < qtd)
+                {
+                    i++;
+
+                    Console.Write("{0}º Valor: ", i);
+                    valor = double.Parse(Console.ReadLine());
+
+                    if (i == 1)
+                    {
+                        maior = menor = valor;
+                    }
+                    else
+                    {
+                        if (valor > maior)
+                        {
+                            maior = valor;
+                        }
+                        else
+                        {
+                            if (valor < menor)
+                            {
+                                menor = valor;
+                            }
+                        }
+                    }
+
+                    soma = soma + valor;
+
+                    if (valor >= 0)
+                    {
+                        pos++;
+                    }
+                    else
+                    {
+                        neg++;
+                    }
+                }
+
+
+                media = soma / qtd;
+                porcPos = pos * 100 / qtd;
+                porcNeg = neg * 100 / qtd;
+
+
+                Console.WriteLine("\n\nMaior Valor: {0}", maior);
+                Console.WriteLine("Menor Valor: {0}", menor);
+                Console.WriteLine("Soma dos Valores: {0}", soma);
+                Console.WriteLine("Média Aritmética: {0}", media);
+                Console.WriteLine("Porcentagem dos Positivos: {0}%", porcPos);
+                Console.WriteLine("Porcentagem dos Negativos: {0}%", porcNeg);
+
+
+                Console.WriteLine("");
+                do
+                {
+                    Console.WriteLine("Executar Novamente (S) para Sim, (N) para Não?");
+                    resp = char.Parse(Console.ReadLine());
+
+                }while (resp != 'S' && resp != 'N');
+
+            }while (resp != 'N');
+        }
+    }
+}

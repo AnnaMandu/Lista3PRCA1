@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lista3Ex1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            double valor = 0;
+
+            Console.WriteLine("\n---------Exercício 1 da Lista 3---------\n");
+
+            Console.Write("Digite um Valor: ");
+            valor = double.Parse(Console.ReadLine());
+
+            while (valor <= 0)
+            {
+                Console.Write("Digite o Valor Novamente, Porém Positivo: ");
+                valor = double.Parse(Console.ReadLine());
+            } 
+        }
+    }
+}

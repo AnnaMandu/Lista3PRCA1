@@ -1,0 +1,51 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lista3Ex6
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            double valor = 0;
+            double b = 0;
+            double a = 0;
+            double result = 0;
+            
+            Console.WriteLine("\n---------Exercício 6 da Lista 3---------\n");
+
+            Console.WriteLine("Digtite um Valor para a Tabuada:");
+            valor = double.Parse(Console.ReadLine());
+
+            while (valor <= 0)
+            {
+                Console.WriteLine("Digtite o Valor Novamente, Porém Positivo:");
+                valor = double.Parse(Console.ReadLine());
+            }
+
+            Console.WriteLine("Digtite o Valor Inicial do Intervalo (A):");
+            a = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Digtite o Valor Final do Intervalo (B):");
+            b = double.Parse(Console.ReadLine());
+
+            while (b <= a)
+            {
+                Console.WriteLine("Digtite o Valor Final do Intervalo Novamente (B > A):");
+                b = double.Parse(Console.ReadLine());
+            } 
+
+            Console.WriteLine("\nTabuada do {0}, No Intervalo do {1} ao {2}\n",valor, b, a);
+
+            while (b >= a)
+            {
+                result = valor * b;
+                Console.WriteLine("{0} x {1} = {2}", valor, b, result);
+                b--;
+            }
+        }
+    }
+}

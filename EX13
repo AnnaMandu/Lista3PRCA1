@@ -1,0 +1,54 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lista3Ex13
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            char resp;
+
+            Console.WriteLine("\n---------Exercício 13 da Lista 3---------\n");
+
+            do
+            {
+                double valor = 0;
+                double cont = 1;
+                double fat = 1;
+
+
+                Console.WriteLine("\nDigite um Valor:");
+                valor = double.Parse(Console.ReadLine());
+
+                while (valor < 0)
+                {
+                    Console.WriteLine("Erro!");
+                    Console.WriteLine("Informe esse Valor Novamente (Valor >= 0): ");
+                    valor = double.Parse(Console.ReadLine());
+                }
+                do
+                {
+                    fat = fat * cont;
+                    cont++;
+                   
+                }
+                while (cont <= valor);
+
+                Console.WriteLine("{0}! = {1}",valor, fat);
+
+                Console.WriteLine("");
+                do
+                {
+                    Console.WriteLine("Executar Novamente (S) para Sim, (N) para Não?");
+                    resp = char.Parse(Console.ReadLine());
+
+                } while (resp != 'S' && resp != 'N');
+
+            } while (resp != 'N');
+        }
+    }
+}
